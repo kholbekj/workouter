@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'home/workout', as: 'workout'
 
   get 'home/clear_cookies', as: 'clear_cookies'
+
+  get 'home/introduction', as: 'introduction'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
