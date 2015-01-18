@@ -1,0 +1,18 @@
+<div class="image-container">
+  <%= image_tag @workout.workout_image, width: 1000, id: 'workout' %>
+  <%= image_tag @workout.descripion_image, width: 1000, id: 'info' %>
+</div>
+
+<script>
+$("#workout").hide();
+$(document).ready(function() {
+  $("#info").click(function() {
+    $("#info").hide();
+    $("#workout").show();
+  });
+  $("#workout").click(function() {
+    $("#workout").hide();
+    $("#info").show();
+  });
+});
+</script>

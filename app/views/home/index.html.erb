@@ -1,0 +1,14 @@
+<div class="settings">
+  <%= form_tag preferences_path do %>
+    <h1>Type:</h1>
+    <%= radio_button_tag :type, 'str', true %>
+    <%= label_tag :type_str, "Strength" %>
+    <%= radio_button_tag :type, 'brn' %>
+    <%= label_tag :type_brn, "Burn" %>
+    <%= radio_button_tag :type, 'flx' %>
+    <%= label_tag :type_flx, "Flex" %>
+    <br>
+    <br>
+    <%= submit_tag "Lets go!" %>
+  <% end %>
+</div>
