@@ -1,6 +1,6 @@
 <div class="image-container">
-  <%= image_tag @workout.workout_image, width: 1000, id: 'workout' %>
-  <%= image_tag @workout.descripion_image, width: 1000, id: 'info' %>
+  <%= image_tag external_image(@workout.workout_image), width: 1000, id: 'workout' %>
+  <%= image_tag external_image(@workout.descripion_image), width: 1000, id: 'info' %>
 </div>
 
 <script>
