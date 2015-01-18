@@ -4,11 +4,16 @@
     <%= radio_button_tag :type, 'str', true %>
     <%= label_tag :type_str, "Strength" %>
     <%= radio_button_tag :type, 'brn' %>
-    <%= label_tag :type_brn, "Burn" %>
-    <%= radio_button_tag :type, 'flx' %>
-    <%= label_tag :type_flx, "Flex" %>
+    <%= label_tag :type_brn, "High burn" %>
+    <%= radio_button_tag :type, 'abs' %>
+    <%= label_tag :type_abs, "Abs" %>
+    <%= radio_button_tag :type, 'hiit' %>
+    <%= label_tag :type_hiit, "High Intensity Burn" %>
+
     <br>
     <br>
     <%= submit_tag "Lets go!" %>
   <% end %>
 </div>
+
+<%# <h3>New here? <%= link_to "Read the introduction", introduction_path %#> </h3> %>

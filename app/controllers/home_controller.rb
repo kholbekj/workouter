@@ -13,16 +13,25 @@ class HomeController < ApplicationController
 
   def clear_cookies
     cookies.delete(:type)
-    redirect_to action: 'index'
+    redirect_to action: :index
   end
 
   def workout
     type =  case cookies[:type]
             when 'str' then 'strength'
-            when 'flx' then 'flex'
+            when 'abs' then 'abs'
             when 'brn' then 'burn'
+            when 'hiit' then 'hiit'
             end
 
+    if type.nil?
+      redirect_to action: :clear_cookies
+    end
+    
     @workout = Workout.focus(type).sample
+  end
+
+  def introduction
+    @images = (1..8).map {|i| "intro_#{i}.jpg" }
   end
 end

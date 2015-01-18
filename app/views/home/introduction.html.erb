@@ -1,0 +1,23 @@
+<div class="intro">
+  <% @images.each_with_index do |image, index| %>
+    <div id="page-<%= index %>" class="page">
+      <%= image_tag external_image(image) %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  var page = 0;
+  var maxPage = <%= @images.size - 1 %>
+  function showPage() {
+    $(".page").hide();
+    $("#page-" + page).show();
+  }
+  $(document).ready(function() {
+    showPage
+    $("#page").click(function(){
+      page = page + 1;
+      showPage();
+    });
+  });
+</script>
